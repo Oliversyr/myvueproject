@@ -1,0 +1,16 @@
+{
+  "name": "sl-contextmenu",
+  "version": "1.0.0",
+  "description": "A contextmenu component for Vue.",
+  "keywords": [
+    "skylink",
+    "sl-contextmenu",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

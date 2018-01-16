@@ -1,0 +1,16 @@
+{
+  "name": "sl-select",
+  "version": "1.0.0",
+  "description": "A select component for Vue.",
+  "keywords": [
+    "skylink",
+    "el-select",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

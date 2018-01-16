@@ -1,0 +1,16 @@
+{
+  "name": "sl-table-col",
+  "version": "1.0.0",
+  "description": "A table col component for Vue.",
+  "keywords": [
+    "skylink",
+    "sl-table-col",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

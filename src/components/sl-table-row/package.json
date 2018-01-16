@@ -1,0 +1,16 @@
+{
+  "name": "sl-table-row",
+  "version": "1.0.0",
+  "description": "A table row component for Vue.",
+  "keywords": [
+    "skylink",
+    "sl-table-row",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

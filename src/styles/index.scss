@@ -1,0 +1,19 @@
+$primary: #28e;
+@import './mixin.scss';
+@import './animate.scss';
+@import './icon-help.scss';
+@import './element-ui.scss';
+@import './slic-ui.scss';
+
+// svg icon 样式
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+// 滚动条样式
+@include scrollBar;
+

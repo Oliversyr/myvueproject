@@ -1,0 +1,16 @@
+{
+  "name": "sl-date-picker",
+  "version": "1.0.0",
+  "description": "A datepicker component for Vue.",
+  "keywords": [
+    "skylink",
+    "el-date-picker",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

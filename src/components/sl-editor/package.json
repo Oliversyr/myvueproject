@@ -1,0 +1,17 @@
+{
+  "name": "sl-editor",
+  "version": "1.0.0",
+  "description": "A editor component for Vue.",
+  "keywords": [
+    "skylink",
+    "sl-editor",
+    "kindeditor",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

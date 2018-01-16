@@ -1,0 +1,514 @@
+#appBody {
+  //覆盖一些element-ui样式 覆盖css样式可在这里添加
+  .el-upload {
+    input[type="file"] {
+      display: none !important;
+    }
+  }
+
+  .el-upload__input {
+    display: none;
+  }
+
+  //暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+  .el-dialog {
+    transform: none;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+  }
+.el-dialog__title {
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 100;
+    color: #555;
+}
+  //element ui upload
+  .upload-container {
+    .el-upload {
+      width: 100%;
+      .el-upload-dragger {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  .el-input-group__append, .el-input-group__prepend {
+    background-color: #f3f3f3;
+    color: #555;
+  }
+
+  .el-button--primary {
+    background-color: #28e;
+    transition: all .4s;
+    min-width: 68px;
+  }
+  .el-button--primary:hover {
+    background-color: #0152a3;
+        border-color: #0152a3;
+  }
+  .el-button--text {
+      color: #999;
+      &:hover {
+          color: #28e;
+      }
+  }
+  .el-table th {
+    background-color: #ececec;
+    border-left: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .el-table__footer-wrapper thead div, .el-table__header-wrapper thead div {
+    background-color: #ececec;
+  }
+
+  .el-table td, .el-table th {
+    height: 30px;
+  }
+
+  .el-pagination {
+    padding: 10px 5px;
+    text-align: right;
+    .el-pagination-btn-sure {
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      margin: 0 10px;
+      padding: 0 10px;
+      font-size: 12px;
+      line-height: 28px;
+      border-radius: 4px;
+      color: #1f2d3d;
+      background-color: #fff;
+
+    }
+  }
+
+  .el-pagination .el-pagination-btn-sure:hover {
+    border-color: #20a0ff;
+  }
+
+  .el-pagination__editor {
+    width: 45px;
+  }
+
+  .el-pagination .btn-next, .el-pagination .btn-prev {
+    border: 0;
+    height: 26px;
+  }
+
+  .el-pagination .btn-next:not(.disabled):hover, .el-pagination .btn-prev:not(.disabled):hover {
+    background-color: #dadada;
+    color: #333;
+  }
+
+  .btn-prev-span {
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+    border-right: 0;
+  }
+
+  .btn-next-span {
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+  }
+
+  .el-table thead .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .el-table tbody .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .el-table .sl-table-checkbox {
+    text-align: center;
+  }
+
+  .el-pager {
+    //display: none;
+  }
+
+  .el-dialog__footer {
+    text-align: center;
+  }
+
+  .el-table {
+    height: 100%;
+  }
+
+  .el-table__body-wrapper {
+    height: calc(100% - 90px);
+  }
+
+  .el-radio__input.is-checked .el-radio__inner {
+    background: #fff;
+  }
+  .el-radio__inner{
+    width: 14px;
+    height: 14px;
+  }
+
+  .el-table__body-wrapper {
+    //height: calc(100% - 90px);
+    height: 100%;
+  }
+
+  .el-radio__inner::after {
+    background-color: #28e;
+    width: 6px;
+    height: 6px;
+  }
+
+  .el-table__empty-text {
+    color: #f36969;
+    font-size: 24px;
+    font-family: 'Microsoft YaHei';
+  }
+
+  .el-table__empty-text::before {
+    background: url(assets/img/tip-error.png) center no-repeat;
+    content: ' ';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background-size: 40px 40px;
+    vertical-align: middle;
+  }
+
+  .dialog-cancel {
+    color: #545454;
+    background-color: #e3e3e3;
+    border-color: #e3e3e3;
+    min-width: 68px;
+  }
+
+  .dialog-cancel:hover {
+    color: #545454;
+    background-color: #c3c2c2;
+    border-color: #c3c2c2;
+  }
+
+  .dialog-footer button {
+    min-width: 70px;
+  }
+
+  .el-dialog__header {
+    padding: 15px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #555;
+  }
+
+  .el-select-dropdown {
+    //z-index: 2035 !important;
+  }
+
+  .el-table__fixed-header-wrapper thead div {
+    background-color: #ececec;
+  }
+
+  .el-textarea {
+    position: relative;
+  }
+
+  .textarea-maxlength {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    line-height: 20px;
+
+    span {
+      color: #28e;
+    }
+  }
+
+  .el-table__fixed-right::before, .el-table__fixed-left::before, .el-table__fixed::before {
+    height: 0;
+  }
+
+  .el-message {
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+
+    border-radius: 5px;
+
+    img {
+      display: none;
+    }
+
+    .el-message__group {
+      min-height: 30px;
+      max-width: 300px;
+      height: auto;
+
+      p {
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        white-space: normal;
+      }
+    }
+
+    .el-message-box__btns {
+      text-align: center;
+      button {
+        min-width: 70px;
+        padding: 7px 9px;
+
+      }
+
+      .el-button--default {
+        background-color: #e3e3e3;
+        border: 0;
+
+        &:hover {
+          color: #545454;
+          background-color: #d7d7d7;
+        }
+      }
+
+      .el-button--primary {
+        background-color: #1177dd;
+
+        &:hover {
+          background-color: #0152a3;
+          color: #fff;
+        }
+      }
+    }
+
+    .el-message-box__header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e5e5;
+
+      .el-message-box__title {
+        text-align: center;
+        font-weight: normal;
+      }
+    }
+  }
+
+  /*************************************************/
+  .el-upload {
+    input[type="file"] {
+      display: none !important;
+    }
+  }
+
+  .el-upload__input {
+    display: none;
+  }
+
+  .upload-container {
+    .el-upload {
+      width: 100%;
+      .el-upload-dragger {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  // 暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+  .el-dialog__wrapper {
+    .el-dialog {
+      //&.el-dialog--small {
+      //  width: 65%;
+      //}
+      transform: none;
+      left: 0;
+      position: relative;
+      margin: 0 auto;
+      .el-dialog__header {
+        //width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0 10px;
+      }
+      .el-dialog__footer {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-top: 1px solid #e5e5e5;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  //element ui input
+  .el-input__inner {
+    //height: 27px;
+  }
+
+  .el-input {
+    &.el-input-group {
+      //width: 20%;
+      .el-input-group__prepend {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+
+  //element ui button
+  .el-button-group {
+    //vertical-align: bottom;
+    .el-button {
+      &:first-child {
+//      border-right: 2px solid #3769c5;
+      }
+    }
+  }
+
+  //element ui table
+  .el-table {
+    font-size: 12px;
+    th {
+      font-weight: 600;
+      background-color: #ececec;
+      text-align: center;
+      height: 30px;
+    }
+    .el-table-column--selection .cell {
+      //text-align: center;
+    }
+    .el-table__header-wrapper thead div {
+      background-color: #ececec;
+      .el-checkbox {
+        //margin-left: -10px;
+      }
+    }
+    .el-table__body-wrapper .el-table__empty-block {
+      position: static;
+    }
+    .el-table__fixed, .el-table__fixed-right {
+      box-shadow: none;
+    }
+    &.el-table--border th {
+      border-right-color: #ccc;
+    }
+    &.el-table--border tr > td:not(:last-child) {
+      border-right: none;
+    }
+  }
+
+  //element ui pagination
+  .el-pagination {
+    float: right;
+    //padding-top: 10px;
+    margin-right: -15px;
+    .el-pagination__jump {
+      margin-left: 10px;
+      margin-right: 10px;
+      .el-pagination__editor {
+        width: 60px;
+      }
+    }
+  }
+
+  //element ui icon
+  .el-date-editor .el-icon-close {
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+/*宽度得到父元素百分百，不需要写死*/
+/*
+@media screen and (max-width: 1500px) and (min-width: 1350px) {
+    .el-date-editor--daterange.el-input {
+      width: 190px;
+    }
+}
+
+@media screen and (max-width: 1349px) {
+    .el-date-editor--daterange.el-input {
+      width: 160px;
+    }
+}
+*/
+
+
+/**************************************************/
+/*图标颜色覆盖*/
+.el-table .sort-caret.ascending {
+    border-bottom: 5px solid #aaa;
+}
+.el-table .sort-caret.descending {
+    border-top: 5px solid #aaa;
+}
+
+.el-menu--horizontal .el-submenu .el-submenu__icon-arrow {
+    color: #aaa;
+}
+.el-select .el-input .el-input__icon {
+    color: #aaa;
+}
+
+/*.el-input--small .el-input__inner {
+    height: 30px !important;
+}*/
+
+/*按钮组分隔线*/
+.el-button-group .el-button--primary:not(:first-child):not(:last-child) {
+    border-left-color: #3769c5;
+    border-right-color: #3769c5;
+}
+.el-button-group .el-button--primary:last-child {
+    border-left-color:  #3769c5;
+}
+.el-input--small .el-input__inner {/*test*/
+  height: 28px;
+}
+.el-form-item__label {
+  padding:0;
+  line-height:28px;
+  font-size: 12px;
+}
+.el-form-item__content {
+  line-height: 28px;
+  font-size: 12px;
+  /*加超出隐藏*/
+//overflow: hidden;
+//text-overflow: ellipsis;
+//white-space: nowrap;
+}
+.el-form-item.el-form-item-detail {
+  margin-bottom: 10px;
+}
+.el-dialog__headerbtn {/*x大小*/
+    font-size: 13px;
+}
+.el-dialog__body {
+//  padding: 30px 20px;
+    padding: 10px 20px;
+}
+/*表格hover背景色*/
+//.el-table__body tr.hover-row.current-row>td,
+.el-table__body tr.hover-row>td {
+background: #edf7ff;
+}
+
+.el-menu .el-submenu .el-menu-item.is-active, 
+.el-menu .el-submenu .el-menu-item:hover, 
+.sidebar-container .el-menu .el-submenu__title:hover {
+    font-weight: bold;
+}
+.el-radio__label {
+    font-size: 12px;
+}
+
+
+
+}/*#appBody end*/

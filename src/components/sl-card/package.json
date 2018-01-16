@@ -1,0 +1,16 @@
+{
+  "name": "sl-card",
+  "version": "1.0.0",
+  "description": "A card component for Vue.",
+  "keywords": [
+    "skylink",
+    "sl-card",
+    "vue",
+    "component"
+  ],
+  "main": "./lib/index.js",
+  "repository": "",
+  "author": "xiahl0916@163.com",
+  "license": "MIT",
+  "dependencies": {}
+}

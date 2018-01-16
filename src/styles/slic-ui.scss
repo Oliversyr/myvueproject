@@ -1,0 +1,3390 @@
+@charset "UTF-8";
+/*
+ *  常规样式，根据需要配置
+ */
+html {
+  box-sizing: border-box;
+}
+
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Arial, "宋体", simsun, sans-serif;
+  font-size: 12px;
+  background: #fff;
+  overflow: hidden;
+  color: #555;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type="text"][disabled] {
+  background-color: #f3f3f3;
+}
+
+/*
+ *  设置没有轮廓线条
+ */
+input,
+textarea,
+button {
+  outline: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+#app {
+  /*
+   *  左浮动，右浮动，清除浮动
+   */
+  .fl {
+    float: left;
+  }
+
+  .fr {
+    float: right;
+  }
+
+  .clearfix:before {
+    content: "";
+    display: table;
+  }
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  /*
+   *  相对定位，绝对定位，固定定位
+   */
+  .pst-rl {
+    position: relative;
+  }
+
+  .pst-as {
+    position: absolute;
+  }
+
+  .pst-fx {
+    position: fixed;
+  }
+
+  /*超出一行显示*/
+  .tx-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /*超出两行显示*/
+  .tx-overflow2 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /*
+   * 字体 font  bengin =========================================================================================
+   */
+
+  /*
+   *  说明: 全局默认大小 12px = 1em = 1rem
+   *  Usage:
+       <h1 class="fz-size2"></h1>
+   *
+   */
+
+  .fz {
+    font-size: 1em;
+  }
+
+  .fz-s2 {
+    font-size: 1.083em;
+  }
+
+  .fz-s3 {
+    font-size: 1.167em;
+  }
+
+  .fz-s4 {
+    font-size: 1.333em;
+  }
+
+  .fz-s5 {
+    font-size: 1.667em;
+  }
+
+  .fz-s6 {
+    font-size: 2em;
+  }
+
+  /*字体加粗*/
+  .tx-bold,
+  .f-w {
+    font-weight: bold;
+  }
+
+  /*左对齐*/
+  .ta-l {
+    text-align: left;
+  }
+
+  /*居中对齐*/
+  .ta-c {
+    text-align: center;
+  }
+
+  /*右对齐*/
+  .ta-r {
+    text-align: right;
+  }
+
+  .tx-underline {
+    text-decoration: underline;
+    color: #17d;
+    cursor: pointer;
+  }
+
+  .f-yh {
+    font-family: '微软雅黑';
+  }
+
+  /*
+   * 颜色 color  bengin =========================================================================================
+   */
+
+  /*
+   *  说明：#2288ee/#28e primary 主题蓝色，#ff4949 辅助红色(secondary)，#11bb55 成功绿色(success)，
+   *  #ffbb00 等待黄色(wait)，#d4e9f6 信息蓝色(info)，#333333 / #333 深灰(gray-darker),#555555 / #555 暗灰(gray-dary),
+   *  #999999 /#999 灰(gray),#cccccc / #ccc 中灰(gray-medium ), #e5e5e5 明灰(gray-light),#fafafa 亮灰(gray-lighter );
+   *  Usage:
+   *  <h3 class="c-333"></h3>
+      <div class="bg-primary"></div>
+   *
+   */
+
+  .c-000 {
+    color: #000;
+  }
+
+  .c-111 {
+    color: #111;
+  }
+
+  .c-222 {
+    color: #222;
+  }
+
+  .c-333,
+  .c-gray-darker {
+    color: #333;
+  }
+
+  .c-444 {
+    color: #444;
+  }
+
+  .c-555,
+  .c-gray-dary {
+    color: #555;
+  }
+
+  .c-666 {
+    color: #666;
+  }
+
+  .c-777 {
+    color: #777;
+  }
+
+  .c-888 {
+    color: #888;
+  }
+
+  .c-999,
+  .c-gray {
+    color: #999;
+  }
+
+  .c-aaa {
+    color: #aaa;
+  }
+
+  /*主题色*/
+  .c-primary,
+  .c-blue,
+  .c-28e {
+    color: #28e;
+  }
+
+  /*#17d 为 #28e hover色*/
+  .c-17d {
+    color: #17d
+  }
+
+  /*辅助色，危险色*/
+  .c-secondary,
+  .c-danger,
+  .c-red,
+  .c-ff4949 {
+    color: #ff4949;
+  }
+
+  /*成功色*/
+  .c-success {
+    color: #11bb55;
+  }
+
+  /*警告色*/
+  .c-warning {
+    color: #fffaeb;
+  }
+
+  /*信息色*/
+  .c-info {
+    color: #d4e9f6;
+  }
+
+  /* 背景色 begin ====================== */
+  .bg-f7f7f7 {
+    background-color: #f7f7f7;
+  }
+
+  .bg-f9f9f9 {
+    background-color: #f9f9f9;
+  }
+
+  /*#545454 为 #d7d7d7 hover色*/
+  .bg-d7d7d7 {
+    background-color: #d7d7d7;
+  }
+
+  .bg-545454 {
+    background-color: #545454;
+  }
+
+  .bg-28e,
+  .bg-2288ee,
+  .bg-blue {
+    background-color: #28e;
+    color: #fff;
+  }
+
+  /*3种黄色，用提示/警示框*/
+  .bg-fff7e6 {
+    background-color: #fff7e6;
+  }
+
+  .bg-fffaeb {
+    background-color: #fffaeb;
+  }
+
+  .bg-fff3cf {
+    background-color: #fff3cf;
+  }
+
+  /*主题色*/
+  .bg-primary {
+    background-color: #28e;
+  }
+
+  /*辅助色，危险色*/
+  .bg-secondary,
+  .bg-danger {
+    background-color: #ff4949;
+  }
+
+  /*成功色*/
+  .bg-success {
+    background-color: #11bb55;
+  }
+
+  /*警告色*/
+  .bg-warning {
+    background-color: #fffaeb;
+  }
+
+  /*信息色*/
+  .bg-info {
+    background-color: #d4e9f6;
+  }
+
+  /*深灰(gray-darker)*/
+  .bg-gray-darker {
+    background-color: #333;
+  }
+
+  /*暗灰(gray-dary)*/
+  .bg-gray-dary {
+    background-color: #555;
+  }
+
+  /*灰(gray)*/
+  .bg-gray {
+    background-color: #999;
+  }
+
+  /*中灰(gray-medium )*/
+  .bg-gray-medium {
+    background-color: #ccc;
+  }
+
+  /*明灰(gray-light)*/
+  .bg-gray-light {
+    background-color: #e5e5e5;
+  }
+
+  /*亮灰(gray-lighter )*/
+  .bg-gray-lighter {
+    background-color: #fafafa;
+  }
+
+  /*
+   * 盒子 box bengin =========================================================================================
+   */
+
+  /*
+   *  说明: 外左边距尺寸 默认为 边距 20px
+   *  Usage:
+       <div class="ml-default"></div>
+   *
+   */
+  .mt10 {
+    margin-top: 10px;
+  }
+
+  .mt15 {
+    margin-top: 15px;
+  }
+
+  .mt20 {
+    margin-top: 20px;
+  }
+
+  .mt60 {
+    margin-top: 60px;
+  }
+
+  .ml-1 {
+    margin-left: -1px;
+  }
+
+  .ml-xs {
+    margin-left: 5px;
+  }
+
+  .ml-xsmall {
+    margin-left: 10px;
+  }
+
+  .ml-small {
+    margin-left: 15px;
+  }
+
+  .ml,
+  .ml-default,
+  .ml-normal {
+    margin-left: 20px;
+  }
+
+  .ml-big {
+    margin-left: 30px;
+  }
+
+  .ml-xbig {
+    margin-left: 50px;
+  }
+
+  .ml-lg {
+
+  }
+
+  /*
+   * 说明: 外右边距尺寸 默认为 边距 20px
+   *  Usage:
+       <div class="mr-default"></div>
+   *
+   */
+
+  .mr-1 {
+    margin-right: -1px;
+  }
+
+  .mr-xs {
+    margin-right: 5px;
+  }
+
+  .mr-xsmall {
+    margin-right: 10px;
+  }
+
+  .mr-small {
+    margin-right: 15px;
+  }
+
+  .mr,
+  .mr-default,
+  .mr-normal {
+    margin-right: 20px;
+  }
+
+  .mr-big {
+    margin-right: 30px;
+  }
+
+  .mr-xbig {
+    margin-right: 50px;
+  }
+
+  .mr-lg {
+
+  }
+
+  /*
+   *  说明: 外上边距尺寸 默认为 边距 20px
+   *  Usage:
+       <div class="mt-default"></div>
+   *
+   */
+  .mt-1 {
+    margin-top: -1px;
+  }
+
+  .mt-xs {
+    margin-top: 5px;
+  }
+
+  .mt-xsmall {
+    margin-top: 10px;
+  }
+
+  .mt-small {
+    margin-top: 15px;
+  }
+
+  .mt,
+  .mt-default,
+  .mt-normal {
+    margin-top: 20px;
+  }
+
+  .mt-big {
+    margin-top: 30px;
+  }
+
+  .mt-xbig {
+    margin-top: 50px;
+  }
+
+  .mt-lg {
+
+  }
+
+  /*
+   *  说明: 外下边距尺寸  默认为 边距 20px
+   *  Usage:
+       <div class="mb-default"></div>
+   *
+   */
+  .mb-1 {
+    margin-bottom: -1px;
+  }
+
+  .mb-xs {
+    margin-bottom: 5px;
+  }
+
+  .mb-xsmall {
+    margin-bottom: 10px;
+  }
+
+  .mb-small {
+    margin-bottom: 15px;
+  }
+
+  .mb,
+  .mb-default,
+  .mb-normal {
+    margin-bottom: 20px;
+  }
+
+  .mb-big {
+    margin-bottom: 30px;
+  }
+
+  .mb-xbig {
+    margin-bottom: 50px;
+  }
+
+  .mb-lg {
+
+  }
+
+  /*
+   *  内左边距尺寸
+   *  Usage:
+       <div class="pl-default"></div>
+   *
+   */
+  .pl-xs {
+    padding-left: 5px;
+  }
+
+  .pl-xsmall {
+    padding-left: 10px;
+  }
+
+  .pl-small {
+    padding-left: 15px;
+  }
+
+  .pl,
+  .pl-default,
+  .pl-normal {
+    padding-left: 20px;
+  }
+
+  .pl-big {
+    padding-left: 30px;
+  }
+
+  .pl-xbig {
+    padding-left: 50px;
+  }
+
+  .pl-lg {
+
+  }
+
+  /*
+   *  内右边距尺寸
+   *  Usage:
+       <div class="pr-default"></div>
+   *
+   */
+  .pr-xs {
+    padding-right: 5px;
+  }
+
+  .pr-xsmall {
+    padding-right: 10px;
+  }
+
+  .pr-small {
+    padding-right: 15px;
+  }
+
+  .pr,
+  .pr-default,
+  .pr-normal {
+    padding-right: 20px;
+  }
+
+  .pr-big {
+    padding-right: 30px;
+  }
+
+  .pr-xbig {
+    padding-right: 50px;
+  }
+
+  .pr-lg {
+
+  }
+
+  /*
+   *  内上边距尺寸
+   *  Usage:
+       <div class="pt-default"></div>
+   *
+   */
+  .pt-xs {
+    padding-top: 5px;
+  }
+
+  .pt-xsmall {
+    padding-top: 10px;
+  }
+
+  .pt-small {
+    padding-top: 15px;
+  }
+
+  .pt,
+  .pt-default,
+  .pt-normal {
+    padding-top: 20px;
+  }
+
+  .pt-big {
+    padding-top: 30px;
+  }
+
+  .pt-xbig {
+    padding-top: 50px;
+  }
+
+  .pt-lg {
+
+  }
+
+  /*
+   *  下外边距尺寸
+   *  Usage:
+       <div class="pb-default"></div>
+   *
+   */
+  .pb-lxs {
+    padding-bottom: 0!important;
+  }
+
+  .pb-xs {
+    padding-bottom: 5px;
+  }
+
+  .pb-xsmall {
+    padding-bottom: 10px;
+  }
+
+  .pb-small {
+    padding-bottom: 15px;
+  }
+
+  .pb,
+  .pb-default,
+  .pb-normal {
+    padding-bottom: 20px;
+  }
+
+  .pb-big {
+    padding-bottom: 30px;
+  }
+
+  .pb-xbig {
+    padding-bottom: 50px;
+  }
+
+  .pb-lg {
+
+  }
+
+  /*
+   *  行高
+   *  Usage:
+       <div class="h-xs"></div>
+   *
+   */
+  .h-xs {
+    height: 16px;
+    line-height: 16px;
+  }
+
+  .h-xsmall {
+    height: 22px;
+    line-height: 22px;
+  }
+
+  .h-small {
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .h-default,
+  .h-normal {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .h-big {
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .h-xbig {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .h-lg {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  /*
+   *  线条
+   *  Usage:
+      <div class="line"></div>
+   *
+   */
+  .line {
+    width: 100%;
+    height: 1px;
+    background: #c5c6c6;
+  }
+
+  .line-dashed {
+    width: 100%;
+    border: 1px dashed #C5C6C6;
+  }
+
+  /*
+   *  固定的盒子宽度
+   *  Usage:
+      <div class="w30"></div>
+   *
+   */
+  .w100 {
+    width: 100%
+  }
+
+  .w30 {
+    width: 30px !important;
+  }
+
+  .w40 {
+    width: 40px !important;
+  }
+
+  .w50 {
+    width: 50px !important;
+  }
+
+  .w60 {
+    width: 60px !important;
+  }
+
+  .w70 {
+    width: 70px !important;
+  }
+
+  .w80 {
+    width: 80px !important;
+  }
+
+  .w90 {
+    width: 90px !important;
+  }
+
+  .w-100 {
+    width: 100px !important;
+  }
+
+  /*.w100 {
+      width: 100px !important;
+  }*/
+  .w101 {
+    width: 101px !important;
+  }
+
+  .w110 {
+    width: 110px !important;
+  }
+
+  .w120 {
+    width: 120px !important;
+  }
+
+  .w130 {
+    width: 130px !important;
+  }
+
+  .w140 {
+    width: 140px !important;
+  }
+
+  .w150 {
+    width: 150px !important;
+  }
+
+  .w160 {
+    width: 160px !important;
+  }
+
+  .w170 {
+    width: 170px !important;
+  }
+
+  .w180 {
+    width: 180px !important;
+  }
+
+  .w190 {
+    width: 190px !important;
+  }
+
+  .w200 {
+    width: 200px !important;
+  }
+
+  .w210 {
+    width: 210px !important;
+  }
+
+  .w220 {
+    width: 220px !important;
+  }
+
+  .w230 {
+    width: 230px !important;
+  }
+
+  .w240 {
+    width: 240px !important;
+  }
+
+  .w250 {
+    width: 250px !important;
+  }
+
+  .w300 {
+    width: 300px !important;
+  }
+
+  .w350 {
+    width: 350px !important;
+  }
+
+  .w390 {
+    width: 390px !important;
+  }
+
+  .w400 {
+    width: 400px !important;
+  }
+
+  .w450 {
+    width: 450px !important;
+  }
+
+  .w500 {
+    width: 500px !important;
+  }
+
+  .w550 {
+    width: 550px !important;
+  }
+
+  .w600 {
+    width: 600px !important;
+  }
+
+  .w700 {
+    width: 700px !important;
+  }
+
+  .w-fifth-part {
+    width: 20%;
+  }
+
+  .w-quarter {
+    width: 25%;
+  }
+
+  .w-one-third {
+    width: 33.3%;
+  }
+
+  .w-hlaf {
+    width: 50%;
+  }
+
+  .w-hp,
+  .w-hundred-percent,
+  .w-full {
+    width: 100%;
+  }
+
+  /*
+   *  说明: 盒子阴影
+   *  Usage:
+       <div class="box-shadow"></div>
+   *
+   */
+  .box-shadow {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  }
+
+  .box-shadow2 {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  }
+
+  /*
+   *  说明: 表单 form   =========================================================================================
+   *  Usage:
+   *
+   */
+
+  /*表单标题*/
+  .slic-form-til {
+    box-sizing: border-box;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 6px;
+    border-left: 3px solid #28e;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  /*
+   *  说明: 多行文本框布局方案
+   *  Usage:
+       <div class="textarea-wrap">
+          <textarea>备注备注备注</textarea>
+          <span class="textarea-tip"><label class="c-28e">12</label>/200</span>
+      </div>
+   *
+   */
+  .textarea-wrap {
+    position: relative;
+    //width: calc(100% - 10px);
+    height: 100px;
+    border: 1px solid #d1d1d1;
+    line-height: 20px;
+    border-radius: 4px;
+  }
+
+  .textarea-wrap textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 4px;
+    line-height: 20px;
+    text-align: left;
+    padding: 0 10px 30px 10px;
+    resize: none;
+  }
+
+  .textarea-tip {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  /*
+   *  说明: 行布局方案  =========================================================================================
+   *  Usage:一行
+       <div class="slic-row">
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+       </div>
+   *
+   */
+  .slic-row {
+    width: 100%;
+    min-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .slic-row:before {
+    content: "";
+    display: table;
+  }
+
+  .slic-row:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  .slic-row .slic-row-item {
+    width: 100%;
+    min-height: 30px;
+    float: left;
+  }
+
+  .slic-row .slic-row-item .til {
+    width: 90px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  .slic-row .slic-row-item .con {
+    float: left;
+    width: calc(100% - 90px);
+    line-height: 30px;
+  }
+
+  /*
+   *  说明: 一行两列
+   *  Usage:
+   * <div class="slic-row row2">
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+       </div>
+   *
+   */
+  .slic-row.row2 .slic-row-item {
+    box-sizing: border-box;
+    width: 50%;
+    height: 30px;
+    float: left;
+  }
+
+  .slic-row.row2 .slic-row-item .til {
+    width: 90px;
+    line-height: 30px;
+    float: left;
+  }
+
+  .slic-row.row2 .slic-row-item .con {
+    width: calc(100% - 90px);
+    float: left;
+  }
+
+  /*
+   *  说明: 一行三列
+   *  Usage:
+   * <div class="slic-row row3">
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+       </div>
+   *
+   */
+  .slic-row.row3 .slic-row-item {
+    box-sizing: border-box;
+    width: 33%;
+    height: 30px;
+    float: left;
+  }
+
+  .slic-row.row3 .slic-row-item .til {
+    width: 90px;
+    line-height: 30px;
+    float: left;
+  }
+
+  .slic-row.row3 .slic-row-item .con {
+    width: calc(100% - 90px);
+    float: left;
+  }
+
+  /*
+   *  说明: 合并列
+   *  Usage:
+   *
+   */
+  .slic-row.row3 .slic-row-item.col2 {
+    width: 67%;
+  }
+
+  /*
+   *  说明: 一行四列
+   *  Usage:
+   * <div class="slic-row row4">
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+       </div>
+   *
+   */
+  .slic-row.row4 .slic-row-item {
+    box-sizing: border-box;
+    width: 25%;
+    height: 30px;
+    float: left;
+  }
+
+  .slic-row.row4 .slic-row-item .til {
+    width: 90px;
+    line-height: 30px;
+    float: left;
+  }
+
+  .slic-row.row4 .slic-row-item .con {
+    width: calc(100% - 90px);
+    float: left;
+  }
+
+  /*
+   *  说明: 合并列
+   *  Usage:
+   * <div class="slic-row row4">
+           <div class="slic-row-item col3"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+       </div>
+   *
+   */
+  .slic-row.row4 .slic-row-item.col2 {
+    width: 50%;
+  }
+
+  .slic-row.row4 .slic-row-item.col3 {
+    width: 75%;
+  }
+
+  /*
+   *  说明: 一行五列
+   *  Usage:
+   * <div class="slic-row row5">
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+           <div class="slic-row-item"> //每行里面的一个子元素
+               <div class="til"></div> //子元素里面的左边标题
+               <div class="con"></div> //子元素里面的右边内容
+           </div>
+
+       </div>
+   *
+   */
+  .slic-row.row5 .slic-row-item {
+    box-sizing: border-box;
+    width: 20%;
+    height: 30px;
+    float: left;
+  }
+
+  .slic-row.row5 .slic-row-item .til {
+    width: 90px;
+    line-height: 30px;
+    float: left;
+  }
+
+  .slic-row.row5 .slic-row-item .con {
+    width: calc(100% - 90px);
+    float: left;
+  }
+
+  /*
+   *  说明: 合并列
+   *  Usage:
+   *
+   */
+  .slic-row.row5 .slic-row-item.col2 {
+    width: 40%;
+  }
+
+  .slic-row.row5 .slic-row-item.col3 {
+    width: 60%;
+  }
+
+  .slic-row.row5 .slic-row-item.col3 {
+    width: 80%;
+  }
+
+  /*
+   *  说明: 左侧标题大小  xs
+   *  Usage:
+   *
+   *
+   */
+  .slic-row .slic-row-item .til.xs,
+  .slic-row .slic-row-item.row2 .til.xs,
+  .slic-row .slic-row-item.row3 .til.xs,
+  .slic-row .slic-row-item.row4 .til.xs,
+  .slic-row .slic-row-item.row5 .til.xs {
+    width: 60px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  /*左侧标题大小 xsmall*/
+  .slic-row .slic-row-item .til.xsmall,
+  .slic-row .slic-row-item.row2 .til.xsmall,
+  .slic-row .slic-row-item.row3 .til.xsmall,
+  .slic-row .slic-row-item.row4 .til.xsmall,
+  .slic-row .slic-row-item.row5 .til.xsmall {
+    width: 70px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  /*左侧标题大小 small*/
+  .slic-row .slic-row-item .til.small,
+  .slic-row .slic-row-item.row2 .til.small,
+  .slic-row .slic-row-item.row3 .til.small,
+  .slic-row .slic-row-item.row4 .til.small,
+  .slic-row .slic-row-item.row5 .til.small {
+    width: 80px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  /*左侧标题大小 big*/
+  .slic-row .slic-row-item .til.big,
+  .slic-row .slic-row-item.row2 .til.big,
+  .slic-row .slic-row-item.row3 .til.big,
+  .slic-row .slic-row-item.row4 .til.big,
+  .slic-row .slic-row-item.row5 .til.big {
+    width: 100px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  /*左侧标题大小 xbig*/
+  .slic-row .slic-row-item .til.xbig,
+  .slic-row .slic-row-item.row2 .til.xbig,
+  .slic-row .slic-row-item.row3 .til.xbig,
+  .slic-row .slic-row-item.row4 .til.xbig,
+  .slic-row .slic-row-item.row5 .til.xbig {
+    width: 110px;
+    line-height: 30px;
+    float: left;
+    text-align: right;
+  }
+
+  .slic-row .view-txt {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    padding-right: 20px;
+    text-align: left;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #f3f3f3;
+  }
+
+  .slic-row .slic-row-item .con .input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 28px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .slic-row .slic-row-item .con .input:focus {
+    border: 1px solid #28e;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgba(34, 136, 238, .2);
+    color: #28e;
+  }
+
+  /*
+   *  component
+   *  Usage:
+
+   *
+   */
+
+  /*
+   * 基础组件 bengin =========================================================================================
+   */
+
+  /*
+   *  按钮
+   *  Usage:
+       <button class="slic-btn"></button>
+   *
+   */
+  .slic-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 28px;
+    padding: 6px 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all .25s;
+  }
+
+  .slic-btn[disable] {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+  }
+
+  /*主题按钮 primary*/
+  .btn-primary {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-primary:focus,
+  .btn-primary.focus {
+    color: #fff;
+    background-color: #17d;
+    border-color: #17d;
+  }
+
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #17d;
+    border-color: #17d;
+  }
+
+  .btn-primary:active,
+  .btn-primary.active {
+    color: #fff;
+    background-color: #17d;
+    border-color: #17d;
+  }
+
+  /*成功按钮 success*/
+  .btn-success {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-success:focus,
+  .btn-success.focus {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-success:hover {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-success:active,
+  .btn-success.active {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  /*信息按钮*/
+  .btn-info {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-info:focus,
+  .btn-info.focus {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-info:hover {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-info:active,
+  .btn-info.active {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  /*警告按钮*/
+  .btn-warning {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-warning:focus,
+  .btn-warning.focus {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-warning:hover {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-warning:active,
+  .btn-warning.active {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  /*危险按钮*/
+  .btn-danger {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-danger:focus,
+  .btn-danger.focus {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-danger:hover {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  .btn-danger:active,
+  .btn-danger.active {
+    color: #fff;
+    background-color: #28e;
+    border-color: #28e;
+  }
+
+  /*常规主题 theme2*/
+  .btn-theme2 {
+    color: #28e;
+    background-color: #fff;
+    border: 1px solid #28e;
+  }
+
+  .btn-theme2:focus,
+  .btn-theme2.focus {
+    color: #17d;
+    background-color: #fff;
+    border: 1px solid #17d;
+  }
+
+  .btn-theme2:hover {
+    color: #17d;
+    background-color: #fff;
+    border: 1px solid #17d;
+  }
+
+  .btn-theme2:active,
+  .btn-theme2.active {
+    color: #fff;
+    background-color: #fff;
+    border-color: #28e;
+  }
+
+  /*
+   *  按钮尺寸 button
+   *  Usage:
+       <button class="btn-xsmall"></button>
+   *
+   */
+  .btn-xsmall {
+    padding: 0 5px;
+    height: 22px;
+  }
+
+  .btn-small {
+    height: 24px;
+    padding: 0 5px;
+  }
+
+  .btn-default {
+    height: 28px;
+  }
+
+  .btn-big {
+    height: 32px;
+  }
+
+  .btn-xbig {
+    height: 36px;
+  }
+
+  /*
+   *  单选按钮组
+   *  Usage:
+      <div class="slic-btn-group">
+          <button type="button" class="slic-btn slic-btn-default active">全部</button>
+          <button type="button" class="slic-btn slic-btn-default">待处理</button>
+          <button type="button" class="slic-btn slic-btn-default">已上传</button>
+      </div>
+   *
+   */
+  .slic-btn-group {
+    position: relative;
+    display: inline-block;
+    //vertical-align: middle;
+    margin-bottom: 10px;
+  }
+   
+    
+  .slic-btn-group .slic-btn {
+    display: inline-block;
+    -webkit-user-select: none;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 0;
+  }
+
+  .slic-btn-group > .slic-btn {
+    font-weight: bold;
+  }
+
+  .slic-btn:not(.active) {
+    margin-left: -1px;
+  }
+
+  .slic-btn-default {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 26px;
+    border: 1px solid #2288ee;
+    background: #fff;
+    color: #2288ee;
+  }
+
+  .slic-btn-default.active,
+  .slic-btn-default:hover {
+    background: #2288ee;
+    color: #fff;
+    transition: .6s;
+  }
+
+  .slic-btn-theme1 {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 26px;
+    border: 1px solid #2288ee;
+    background: #fff;
+    color: #2288ee;
+  }
+
+  .slic-btn-theme1.active,
+  .slic-btn-theme1:hover {
+    background: #2288ee;
+    color: #fff;
+    transition: .6s;
+  }
+
+  .slic-btn-theme1.active {
+    transition: 0s;
+  }
+
+  .slic-btn-theme2 {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin: 0 10px;
+    border: none;
+    border-bottom: none;
+    background: #fff;
+    color: #555;
+  }
+
+  .slic-btn-theme2.active,
+  .slic-btn-theme2:hover {
+    border-bottom: 2px solid #2288ee;
+    background: #fff;
+    color: #2288ee;
+  }
+
+  /*消除slic-btn定义的选中状态距左-1px*/
+  .slic-btn-theme2:not(.active) {
+    margin: 0 10px;
+  }
+
+  /*主题3*/
+  .slic-btn-theme3 {
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border: none;
+    background: #2288ee;
+    color: #fff;
+    /* border-right: 1px solid #3769c5; */
+    box-shadow: -1px 0px 0 #3769c5; /*解决点击时，边框线高于按钮高度的问题，原因未明*/
+    transition: all .3s;
+  }
+
+  .slic-btn-theme3.active,
+  .slic-btn-theme3:hover {
+    background: #3769c5;
+    color: #fff;
+
+  }
+
+  .slic-btn-theme3.active {
+    transition: 0s;
+  }
+
+  .slic-btn.slic-btn-theme3:not(.active) {
+    margin-left: 0;
+  }
+
+  .slic-btn-theme3:first-child {
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .slic-btn-theme3:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  /*主题4*/
+  .slic-btn-theme4 {
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border: none;
+    background: #fff;
+    color: #555;
+    border: 1px solid #ccc;
+    transition: all .3s;
+  }
+
+  .slic-btn-theme4.active,
+  .slic-btn-theme4:hover {
+    background: #28e;
+    color: #fff;
+
+  }
+
+  .slic-btn-theme4.active {
+    transition: 0s;
+  }
+
+  .slic-btn.slic-btn-theme4:not(.active) {
+    margin-left: -1px;
+  }
+
+  .slic-btn-theme4:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .slic-btn-theme4:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .btn-sure {
+    padding: 0 10px;
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #1177dd;
+    border-radius: 4px;
+  }
+
+  .btn-sure:hover {
+    color: #fff;
+    background-color: #0152a3;
+  }
+
+  .btn-sure.disable {
+    background: #999999;
+  }
+
+  .btn-cancel {
+    min-width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #d7d7d7;
+    margin-left: 15px;
+    color: #545454;
+    border-radius: 4px;
+
+  }
+
+  .btn-cancel:hover {
+    color: #545454;
+    background-color: #c3c2c2;
+  }
+
+  .btn-sure,
+  .btn-cancel {
+    border: none !important;
+    font-size: 12px !important;
+    font-family: '宋体' !important;
+    font-weight: normal;
+  }
+
+  .back {
+    &:hover {
+      background-color: #2288ee;
+      color: #fff;
+    }
+    background-color: #fff;
+    color: #2288ee;
+    border: 1px solid #2288ee;
+    .svg-icon {
+      margin-right: 2px;
+    }
+  }
+
+  /*
+   *  进度条
+   *  Usage:
+      <div class="slic-progress">
+        <div class="slic-progress-bar"  style="width: 60%;">
+          <span > 60% </span>
+        </div>
+      </div>
+   *
+   */
+  .slic-progress {
+    box-sizing: border-box;
+    width: inherit;
+    height: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .slic-progress.theme1 {
+    box-sizing: border-box;
+    width: inherit;
+    height: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .slic-progress.theme2 {
+    box-sizing: border-box;
+    width: inherit;
+    height: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: none;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  }
+
+  .slic-progress-bar {
+    box-sizing: border-box;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    background-color: #2288ee;
+    border: 1px solid #2288ee;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+  }
+
+  .slic-progress-bar.theme1 {
+    background-color: #2288ee;
+    border: 1px solid #2288ee;
+  }
+
+  .slic-progress-bar.theme2 {
+    background-color: #ff4949;
+    border: 1px solid #ff4949;
+  }
+
+  .slic-progress-bar.theme3 {
+    background-color: #5cb85c;
+    border: 1px solid #5cb85c;
+  }
+
+  .slic-progress-bar.theme4 {
+    background-color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+  }
+
+  .slic-progress-bar.theme11 {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+  }
+
+  .slic-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /*
+   *  按钮组 下拉风格1
+   *  Usage:
+      <ul class="slic-drow-menu">
+              <li class="slic-drow-menu-li">
+                  <div class="slic-drow-menu-li-con">
+                      业务消息<i class="caret-down"></i>
+                      <div class="slic-drow-menu-OpList">
+                          <ul>
+                              <li>全部 </li>
+                              <li>订单	</li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+              <li class="slic-drow-menu-li">
+                  <div class="slic-drow-menu-li-con active">
+                      公告消息  <i class="caret-down"></i>
+                  </div>
+              </li>
+          </ul>
+   *
+   */
+
+  .slic-drow-menu {
+    width: 100%;
+    height: 25px;
+    box-sizing: border-box;
+  }
+
+  .slic-drow-menu .slic-drow-menu-li {
+    position: relative;
+    float: left;
+    height: 25px;
+    box-sizing: border-box;
+    line-height: 25px;
+    margin: 0 10px;
+    padding: 0;
+    font-size: 14px;
+    color: #2288ee;
+    font-weight: bold;
+  }
+
+  .slic-drow-menu .slic-drow-menu-li:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 1px;
+    height: 18px;
+    background: #ccc;
+  }
+
+  .slic-drow-menu li:first-of-type {
+    margin-left: 0;
+  }
+
+  .slic-drow-menu li:last-of-type:after {
+    background: none;
+  }
+
+  .slic-drow-menu .slic-drow-menu-li-con {
+    margin-right: 20px;
+    padding: 0 10px;
+    position: relative;
+  }
+
+  .slic-drow-menu .slic-drow-menu-li-con:hover,
+  .slic-drow-menu .slic-drow-menu-li-con.active {
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    cursor: pointer;
+    background: #2288ee;
+    transition: all 0.5s;
+
+  }
+
+  .slic-drow-menu-OpList {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    padding-top: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 1px 1px 5px #e0e0e0;
+    background: #fff;
+    display: none;
+  }
+
+  .slic-drow-menu-OpList ul {
+    width: 100%;
+  }
+
+  .slic-drow-menu-OpList li {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 10px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #555;
+
+  }
+
+  .slic-drow-menu-OpList li:hover {
+    line-height: 26px;
+    color: #2288ee;
+    font-weight: 100;
+    background: #fff;
+  }
+
+  /*按钮组 下拉 弹出*/
+  .slic-drow-menu li:hover .slic-drow-menu-OpList {
+    display: block;
+  }
+
+  /*
+   *  三角箭头 css图标
+   *  Usage:
+      <i class="caret-up theme2"></i>
+   *
+   */
+  .caret-down,
+  .caret-up.active {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9
+  ;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    color: #fff;
+  }
+
+  .caret-up,
+  .caret-down.active {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9
+  ;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    color: #fff;
+  }
+
+  .caret-down.theme1,
+  .caret-up.theme1 {
+    color: #28e;
+  }
+
+  .caret-down.theme2,
+  .caret-up.theme2 {
+    color: #555;
+  }
+
+  /*
+   *  单按钮下拉选择(向上下拉)
+   *  Usage:
+       <button type="button" class="slic-drow-btn theme1 dropup"> 标识 <i class="caret-up theme2"></i>
+          <div class="slic-drow-btn-menu-wrap ">
+              <ul class="slic-drow-btn-menu">
+                  <li>当前页消息</li>
+                  <li>已选消息</li>
+              </ul>
+          </div>
+      </button>
+   *
+   */
+  .slic-drow-btn {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 60px;
+    height: 24px;
+    padding: 0 16px;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .slic-drow-btn:hover,
+  .slic-drow-btn.active {
+    box-sizing: border-box;
+    min-width: 60px;
+    height: 24px;
+    padding: 0 16px;
+
+    background-color: #fff;
+    border: 1px solid #2288ee;
+    color: #2288ee;
+    font-size: 12px;
+    transition: .5s;
+  }
+
+  .slic-drow-btn:hover .caret-up.theme2 {
+    color: #28e;
+  }
+
+  /*下拉弹出框(向上下拉)透明背景盒子*/
+  .slic-drow-btn-menu-wrap {
+    position: absolute;
+    z-index: 2;
+    top: auto;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 2px;
+    transform: translate(-50%, 0);
+    min-width: 60px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    background: none;
+    display: none;
+  }
+
+  /*下拉弹出框(向上下拉)菜单*/
+  .slic-drow-btn-menu {
+    position: absolute;
+    z-index: 3;
+    top: auto;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 120px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 1px 1px 5px #e0e0e0;
+    font-size: 14px;
+    background: #fff;
+    display: none;
+  }
+
+  .slic-drow-btn-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -21px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ccc;
+  }
+
+  .slic-drow-btn-menu:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+  }
+
+  .slic-drow-btn-menu li {
+    width: 100%;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    line-height: 26px;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+  }
+
+  .slic-drow-btn-menu li:hover,
+  .slic-drow-btn-menu li.active {
+    background: #2288ee;
+    color: #fff;
+    transition: .3s;
+  }
+
+  .slic-drow-btn:hover .slic-drow-btn-menu-wrap,
+  .slic-drow-btn:hover .slic-drow-btn-menu {
+    display: block;
+  }
+
+  /*
+   *  图片列表上传
+   *  Usage:
+      <ul class="slic-img-upload">
+          <li  class="slic-img-upload-item">
+              <div class="img-box">
+                  <img src="imgs/upload-defalut.png">
+                  <div class="img-box-btns">
+                      <span class="btn-modify" href="javascript:void(0)" >修改图片</span>
+                      <span class="btn-del" href="javascript:void(0)" >删除图片</span>
+                  </div>
+              </div>
+              <div class="img-upload-btns">
+                  <button type="button" class="btn fl">往前移</button>
+                  <button type="button" class="btn fr">往后移</button>
+              </div>
+          </li>
+
+          <li class="slic-img-upload-item">
+              <div class="img-box">
+                  <span class="icon-img-add"><i></i></span>
+              </div>
+          </li>
+      </ul>
+   *
+   */
+  .slic-img-upload {
+    margin-top: 10px;
+  }
+
+  .slic-img-upload li.slic-img-upload-item {
+    width: 180px;
+    height: 216px;
+    margin: 0 20px 20px 0;
+    float: left;
+  }
+
+  .slic-img-upload li .img-box {
+    position: relative;
+    box-sizing: border-box;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #ccc;
+  }
+
+  .slic-img-upload li .img-box {
+    position: relative;
+
+  }
+
+  .slic-img-upload li .img-box img {
+    width: 135px;
+    height: 135px;
+    margin: 20px;
+  }
+
+  /*图片上传-十 添加图标*/
+  .slic-img-upload li .img-box .icon-img-add {
+    position: absolute;
+
+  }
+
+  .slic-img-upload li .img-box .icon-img-add {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .slic-img-upload li .img-box .icon-img-add i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 3px;
+    background: #ccc;
+
+  }
+
+  .slic-img-upload li .img-box .icon-img-add i:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 3px;
+    background: #ccc;
+  }
+
+  /*图片上传-图片操作按钮*/
+  .slic-img-upload li .img-box .img-box-btns {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 178px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+  }
+
+  .slic-img-upload li .img-box .img-box-btns .btn-modify {
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .slic-img-upload li .img-box .img-box-btns .btn-del {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .slic-img-upload li .img-box .img-box-btns .btn-upload {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /*图片上传-底部按钮*/
+  .slic-img-upload li .img-upload-btns {
+    width: 100%;
+    height: 30px;
+    display: none;
+  }
+
+  .slic-img-upload li .img-upload-btns .btn {
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #1177dd;
+    background: #fff;
+    color: #17d;
+    cursor: pointer;
+
+  }
+
+  .slic-img-upload li .img-upload-btns .btn:hover {
+    background: #1177dd;
+    color: #fff;
+  }
+
+  .slic-img-upload li:hover .img-box-btns,
+  .slic-img-upload li:hover .img-upload-btns {
+    display: block;
+  }
+
+  /*图片上传弹出背景 */
+  .shop-mengban {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  .shop-mengban .contain {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px;
+    height: 100%;
+  }
+
+  .shop-mengban .contain .shop-profile-content {
+    width: 560px;
+    height: 440px;
+    position: absolute;
+    left: 340px;
+    top: 40px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #2e3137;
+    cursor: auto;
+    border: 1px solid #2e3137;
+  }
+
+  /*
+   *  输入框组
+   *  Usage:
+   *
+   */
+  .slic-input-group {
+    height: 28px;
+//  line-height: 28px; /*10-23 1px 高度*/
+    line-height: normal;/*10-23 1px 高度*/
+    display: inline-block;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .slic-input-group .slic-input-group-addon {
+    min-width: 90px;
+    max-width: 120px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    background-color: #f3f3f3;
+    color: #555;
+  }
+
+  .slic-input-group-wrap {
+    border: none;
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+  }
+
+  /*组件操作下拉弹出*/
+  .slic-input-group-drow {
+    z-index: 9;
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    max-height: 180px;
+    overflow-y: auto;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    display: none;
+  }
+
+  .slic-input-group-drow li {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+  }
+
+  .slic-input-group-drow li.active,
+  .slic-input-group-drow li:hover {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    color: #1177dd;
+    background-color: #d4e9f6;
+
+  }
+
+  .slic-input-group:hover .slic-input-group-drow {
+    display: block;
+  }
+
+  .slic-input-group .slic-input-group-input {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    /* transition: all .25s ease-in-out; */
+  }
+
+  .slic-input-group .slic-input-group-input:focus {
+
+    border: 1px solid #28e;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgba(34, 136, 238, .2);
+    color: #28e;
+  }
+
+  .slic-input-group .slic-input-group-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+  }
+
+  .slic-input-group-icon i:hover {
+    color: #28e;
+  }
+
+  .slic-input-group .slic-input-group-icon.customer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+
+  }
+
+  .slic-input-group-wrap2 {
+    position: relative;
+    border: none;
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .slic-input-group-wrap2 .slic-input-group-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s;
+
+  }
+
+  .slic-input-group-wrap2 .slic-input-group-icon i:hover {
+    color: #28e;
+  }
+
+  /*
+   *  开关按钮
+   *  Usage:
+      <input type="checkbox" class="input-checkbox " id="mycheckbox1">
+      <label class="label-check" for="mycheckbox1"></label>
+
+      <input type="checkbox" class="input-checkbox " id="mycheckbox2" checked="checked">
+      <label class="label-check" for="mycheckbox2"></label>
+   *
+   */
+  .input-checkbox {
+    display: none;
+  }
+
+  .input-checkbox + .label-check {
+    width: 26px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: 0;
+    border-radius: 15px;
+    border: 1px solid #ff4949;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    top: 5px;
+  }
+
+  .input-checkbox + .label-check:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: relative;
+    background-color: #ff4949;
+    border-radius: 50%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    margin: 2px 0 0 3px;
+    left: 0;
+  }
+
+  .input-checkbox:checked + .label-check {
+    border-color: #2288ee;
+    background-color: #2288ee;
+  }
+
+  .input-checkbox:checked + .label-check:after {
+    left: 50%;
+    background-color: #fff;
+    margin: 2px 3px 0 0;
+  }
+
+  /*
+   *  单选按钮按钮
+   *  Usage:
+      <input type="radio" class="slic-radio" name="name1"/>
+      <input type="radio" class="slic-radio" name="name1"/>
+   *
+   */
+
+  input[type="radio"].slic-radio:focus,
+  input[type="radio"].slic-radio {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0), inset 0px -15px 10px -12px rgba(0, 0, 0, 0);
+    padding: 6px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  input[type="radio"].slic-radio:checked {
+    border: 1px solid #1177dd;
+  }
+
+  input[type="radio"].slic-radio:checked:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    position: absolute;
+    background: #1177dd;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0);
+    left: 2px;
+    top: 2px;
+  }
+
+  /*
+   *  复选框
+   *  Usage:
+      <input type="checkbox" class="slic-checkbox" name="name2"/>
+      <input type="checkbox" class="slic-checkbox" name="name3" checked="checked"/>
+      <input type="checkbox" class="slic-checkbox" name="name4" disabled="disabled"/>
+   *
+   */
+  input[type="checkbox"].slic-checkbox:focus,
+  input[type="checkbox"].slic-checkbox {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #1177dd;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0), inset 0px -15px 10px -12px rgba(0, 0, 0, 0);
+    padding: 7px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  input[type="checkbox"].slic-checkbox:checked:after {
+    content: '\2714';
+    position: absolute;
+    top: -1px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #28e;
+  }
+
+  input[type="checkbox"].slic-checkbox:checked {
+    background-color: #28e;
+    border: 1px solid #28e;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0), inset 15px 10px -12px rgba(255, 255, 255, 0);
+    color: #99a1a7;
+  }
+
+  input[disabled="disabled"].slic-checkbox {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, .25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+  }
+
+  /*
+   *  标签面板 slic-tab-panel
+   *  Usage:
+
+   *
+   */
+  /* .slic-tab-panel {
+      box-sizing: border-box;
+      width: 100%;
+      height: 35px;
+      border-bottom: 1px solid #28e ;
+  }
+  .slic-tab-panel .tab-btn-group {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .slic-tab-panel .tab-btn-group .tab-btn {
+      float: left;
+      box-sizing: border-box;
+      min-width: 60px;
+      height: 34px;
+      padding: 0 20px;
+      border:none;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      background-color: #ffffff;
+  }
+  .slic-tab-panel .tab-btn-group .tab-btn:hover {
+      border-left: 1px solid #28e;
+      border-right: 1px solid #28e;
+      border-top: 1px solid #28e;
+      z-index: 2;
+      margin-right: 1px;
+
+      font-weight: bold;
+      font-size: 14px;
+      color:#28e;
+  }
+  .slic-tab-panel .tab-btn-group .tab-btn.active {
+      border-left: 1px solid #28e;
+      border-right: 1px solid #28e;
+      border-top: 1px solid #28e;
+      z-index: 2;
+      margin-right: 1px;
+      font-weight: bold;
+      font-size: 14px;
+      color:#28e;
+  }
+  .slic-tab-panel .tab-btn-group .tab-btn:first-child {
+      border-top-left-radius:4px;
+  }
+  .slic-tab-panel .tab-btn-group .tab-btn:last-child {
+
+      border-top-right-radius:4px;:4px;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn:not(.active) {
+      margin-left: -1px;
+  }
+
+   */
+
+  .slic-tab-panel {
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #28e;
+  }
+
+  .slic-tab-panel .tab-btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn {
+    float: left;
+    box-sizing: border-box;
+    min-width: 60px;
+    height: 34px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-bottom: none;
+    background-color: #ffffff;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn:hover {
+    border-color: #28e;
+    color: #28e;
+    box-shadow: -1px 0 0 0 #28e;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn.active {
+    border-color: #28e;
+    color: #28e;
+    box-shadow: -1px 0 0 0 #28e;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn:first-child {
+    border-top-left-radius: 4px;
+    border-left: 1px solid #ccc;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn.active:first-child {
+    border-left: 1px solid #28e;
+    color: #28e;
+    box-shadow: none;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn:first-child:hover {
+    border-left: 1px solid #28e;
+    color: #28e;
+    box-shadow: none;
+  }
+
+  .slic-tab-panel .tab-btn-group .tab-btn:last-child {
+    //border-top-right-radius:4px;:4px;
+  }
+
+  /*
+   * Flex  bengin =========================================================================================
+   */
+
+  .flex-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .flex-col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .sl-page-container {
+    flex: 1;
+    height: 100%;
+  }
+
+  .sl-search-panel {
+    background: #fff;
+    padding: 10px;
+    padding-bottom: 0; /*add*/
+    margin-top: 10px; /*add*/
+    border-radius: 4px;
+    & > div {
+      margin-right: 15px;
+    }
+    .sl-search-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  .sl-operator-panel {
+    .sl-operator-left {
+      position: absolute;
+      top: 0;
+      left: 172px;
+      right: auto;
+    }
+    .sl-operator-right {
+      position: absolute;
+      top: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .sl-content-panel {
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 28px;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .sl-panel {
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 28px;
+    height: auto;
+    padding: 0;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+  .sl-item-panel {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  /*表格排序功能按钮区域  新标准界面demo*/
+  .grid-top {
+    width: 100%;
+    min-height: 40px;
+    max-height: 80px;
+    background: #fff;
+  }
+
+  .grid-top-left {
+    float: left;
+
+  }
+
+  .grid-top-right {
+    margin: 5px 0 0 0;
+    text-align: right;
+  }
+
+  /*按钮间距为10px*/
+  .grid-top-right > button {
+    margin-right: 7px;
+  }
+
+  .grid-sort {
+    float: left;
+  }
+
+  .grid-sort dt {
+    float: left;
+    min-width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: #999;
+  }
+
+  .grid-sort dt.active {
+    float: left;
+    min-width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    line-height: 30px;
+    text-align: center;
+    color: #2288ee;
+    border-bottom: 1px solid #2288ee;
+  }
+
+  .grid-sort dd {
+    float: left;
+    min-width: 40px;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    transition: all .3s;
+    cursor: pointer;
+  }
+
+  .grid-sort dd:hover,
+  .grid-sort dd.active {
+    float: left;
+    min-width: 40px;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #2288ee;
+  }
+
+  .icon-sort {
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+    background: url(assets/img/icon-sort.png) no-repeat;
+  }
+
+  .icon-sort-down-blue {
+    background-position: 0 0;
+  }
+
+  .icon-sort-up-blue {
+    background-position: -10px 0;
+  }
+
+  .icon-sort-down-gray {
+    background-position: -20px 0;
+  }
+
+  .icon-sort-up-gray {
+    background-position: -30px 0;
+  }
+
+  /*
+   * Other  bengin =========================================================================================
+   */
+
+  .overflow-y {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /***********add by yangr 2017-07-13 start*****************/
+
+  .slic-head-panel {
+    //border-bottom: 1px solid #ccc;
+  }
+
+  .slic-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .sl-search-showPart {
+    margin: 0 auto;
+    width: 100%;
+    /*display: inline-block;*/
+
+  }
+
+  .sl-search-showPart-item {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 28px;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+
+  }
+
+  .slic-content-tree, .slic-content-info {
+    display: inline-block;
+  }
+
+  .slic-content-tree {
+    //border-right: 1px solid #ccc;
+    width: 265px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .slic-content-info {
+    height: auto;
+    //  padding: 0 0 0 10px;
+    flex: 1;
+    width: calc(100% - 265px);
+    /*width: 500px;*/
+  }
+
+  .sl-content-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sl-content-row-item {
+    margin-top: 20px;
+    //text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sl-content-row-item:last-child {
+    /*margin-right: 20px;*/
+  }
+
+  .sl-content-row-item-label {
+    font-weight: normal;
+    width: 90px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .sl-content-row-item-input {
+    /*  height: 28px;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      outline: none;*/
+    width: 70%;
+  }
+
+  .sl-star::before {
+    content: '*';
+    color: red;
+  }
+
+  .sl-content-handle {
+    background-color: #fff;
+    padding: 10px;
+    padding-bottom: 0; /*add*/
+    border-radius: 5px;
+    //  margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    .sl-content-handle-left {
+      //margin-left: 30px;
+    }
+
+    .sl-content-handle-right {
+      //margin-right: 20px;
+    }
+
+  }
+
+  .sl-grid-btn {
+    cursor: pointer;
+    color: #999;
+  }
+
+  .sl-grid-btn:hover {
+    color: #28e;
+  }
+
+  .slic-list-label-title {
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #bfcbd9;
+  }
+
+  .slic-list-btn-title {
+    width: 58%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ececec;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .slic-list-label {
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .slic-list-btn {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+    //border-right: 1px solid #28e;
+    &:hover {
+      color: #28e;
+    }
+  }
+
+  .slic-content-tree-title {
+    height: 50px;
+    //color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+    padding: 0 10px;
+    //background-color: #28e;
+    //width: 265px;
+    text-align: justify;
+  }
+
+  .slic-content-tree-title::after {
+    width: 100%;
+    height: 0;
+    content: '';
+    display: inline-block;
+  }
+
+  .slic-content-tree-title > span {
+    display: inline-block;
+  }
+
+  .slic-list {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #dfe6ec;
+    cursor: pointer;
+    //margin: 0 10px;
+  }
+
+  .slic-list-title {
+    background-color: #ececec;
+  }
+
+  .slic-list-right {
+    text-align: center;
+    width: 58%;
+    display: inline-block;
+  }
+
+  .slic-list:hover, .slic-list.active {
+    background-color: #dcebfa;
+  }
+
+  .slic-list-ul {
+    border-left: 1px solid #dfe6ec;
+    border-right: 1px solid #dfe6ec;
+  }
+
+  .noedit {
+    input {
+      border: 0;
+      outline: none;
+      background-color: #f3f3f3;
+    }
+
+    .el-input-group__append, .el-input-group__prepend {
+      border: 0;
+    }
+  }
+
+  .sl-form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+    .sl-form-row {
+      //margin-bottom: 20px;
+
+      .sl-form-label {
+        width: 90px;
+        display: inline-block;
+      }
+
+      .sl-form-input {
+        width: calc(100% - 100px);
+        display: inline-block;
+      }
+    }
+  }
+
+  .sl-form-group {
+
+    .sl-row-group {
+      padding: 10px;
+      //padding-bottom: 0;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+
+      .sl-row-group-title {
+        //      font-size: 16px;
+        font-size: 14px;
+        font-weight: bold;
+        border-left: 3px solid #28e;
+        padding-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      .sl-form-row {
+        //margin-bottom: 20px;
+
+        .sl-form-label {
+          width: 90px;
+          display: inline-block;
+        }
+
+        .sl-form-input {
+          width: calc(100% - 100px);
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .sl-back-btn {
+    color: #28e;
+    background-color: #fff;
+    border: 1px solid #28e;
+  }
+
+  .more-operate {
+    color: #999;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .more-operate-container {
+        display: block;
+      }
+    }
+
+    .more-operate-container {
+      position: absolute;
+      top: 20px;
+      right: -2px;
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 0 #e1e1e1;
+      overflow: hidden;
+      display: none;
+      z-index: 999;
+
+      .more-operate-list {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #fff;
+        color: #555;
+
+        &:hover {
+          background-color: #d5e9f7;
+          color: #28e;
+        }
+      }
+
+    }
+  }
+    
+    .sl-amount-panel {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 25px;
+        line-height: 25px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        .sl-amount-panel-item {
+            display: inline-block;
+            min-width: 40px;
+            margin-right: 25px;
+            font-size: 14px;
+            font-family: 微软雅黑;
+            color: rgb(85, 85, 85);
+    }
+    }
+    .el-input-number__decrease, 
+    .el-input-number__increase{/*解决数量增加底部多出1px问题*/
+            top: 0;
+       }
+       
+    .el-input--small .el-input__inner {
+      height: 28px !important;
+    }
+
+  .slic-input-group.slic-input-group-date {
+    line-height: 26px;
+    height: 26px;
+  }
+  
+  //10-24 add
+  .sl-search-panel .slic-btn-group{/*1px水平对齐问题,display:inline-block 属性引起 */
+    top:-1px;
+  } 
+  
+  /***********add by yangr 2017-07-13 end*****************/
+}/*#app end*/
